@@ -1,0 +1,7 @@
+@import '~@angular/material/theming';
+@include mat-core();
+$lucsan-app-primary: mat-palette($mat-blue-grey, 800);
+$lucsan-app-accent: mat-palette($mat-orange, A700);
+$lucsan-app-warn: mat-palette($mat-red, A700);
+$lucsan-app-theme: mat-dark-theme($lucsan-app-primary, $lucsan-app-accent, $lucsan-app-warn);
+@include angular-material-theme($lucsan-app-theme);
