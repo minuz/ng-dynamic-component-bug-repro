@@ -3,8 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { DynamicContainerModule } from './dynamic-container/dynamic-container.module';
-import { TestModule } from './test/test.module';
-import { TestComponent } from './test/test/test.component';
+import * as Test from './test/test.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +11,8 @@ import { TestComponent } from './test/test/test.component';
   ],
   imports: [
     BrowserModule,
-    // TestModule,
-    // DynamicContainerModule.withComponent(TestComponent)
+    Test.TestModule,
+    DynamicContainerModule.withComponent(Test.ModuleComponent)
   ],
   bootstrap: [AppComponent]
 })
